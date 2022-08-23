@@ -33,4 +33,30 @@ Para realizar compras
     |           email          |    senha    |                                          msg                                                 |
     |    teste123@gmail.com    |   123456    |  Welcome to your account. Here you can manage all of your personal information and orders.   |
   
+    @recuperacao_senha_invalida
+    Esquema do Cenário: Recuperação de senha sem sucesso
+        Quando o usuário clicar no botão Forgot your password?
+        E for redirecionado a página de Forgot Your Password
+        E tentar recuperar a senha com "<email>" 
+        Então visualizará a "<msg>"
 
+    Exemplos:
+
+    
+    |           email          |                         msg                                  |
+    |                          |  Invalid email address.                                      |
+    |    teste123              |  Invalid email address.                                      |
+    |    teste123@oi.com       |  There is no account registered for this email address.      |
+
+    @recuperacao_senha_valida 
+    Esquema do Cenário: Recuperação de senha com sucesso
+        Quando o usuário clicar no botão Forgot your password?
+        E for redirecionado a página de Forgot Your Password
+        E tentar recuperar a senha com "<email>" 
+        Então visualizará a "<msg>" comprovando sucesso 
+
+    Exemplos:
+
+    
+    |           email          |                                   msg                                    |
+    |    teste123@gmail.com    |  A confirmation email has been sent to your address: teste123@gmail.com  |

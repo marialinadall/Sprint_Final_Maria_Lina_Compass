@@ -11,20 +11,6 @@ Para realizar compras
     Contexto:
         Dado que esteja na página de Authentication do e-commerce em questão
 
-    @valid_register
-    Esquema do Cenário: Fazer um cadastro válido na página de autenticação
-        Quando o usúario cadastrar um e-mail válido
-        E a página for redirecionada para YOUR PERSONAL INFORMATION
-        E os dados forem preenchidos corretamente
-        Então o usuário terá realizado o cadastro com sucesso "<sucesso>"
-        
-        Exemplos:
-
-        |                                          sucesso                                                      |   
-        |       Welcome to your account. Here you can manage all of your personal information and orders.       |  
-
-
-
     @invalid_register
     Esquema do Cenário: Fazer um cadastro inválido na página de autenticação
         Quando o usúario cadastrar um e-mail inválido
@@ -47,3 +33,15 @@ Para realizar compras
 
         |            errors             |   
         |      There are 8 errors       |  
+    
+    @valid_register
+    Esquema do Cenário: Fazer um cadastro válido na página de autenticação
+        Quando o usúario cadastrar um e-mail válido
+        E a página for redirecionada para YOUR PERSONAL INFORMATION
+        E os dados forem preenchidos corretamente
+        Então o usuário terá realizado o cadastro com sucesso "<sucesso>"
+        
+        Exemplos:
+
+        |                                          sucesso                                                      |   
+        |       Welcome to your account. Here you can manage all of your personal information and orders.       |  

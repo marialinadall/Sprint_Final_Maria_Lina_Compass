@@ -22,6 +22,15 @@ Então('a imagem do produto deverá ser alterada') do
     sleep(2)
 end
 
+Quando('trocar o tamanho do produto na PDP') do
+    @initial_size = @product_page.chosen_size
+    @product_page.dif_size(2)
+end
+  
+Então('o tamanho do produto deverá ser alterado') do
+    expect(@product_page.chosen_size.text).to eql "L"
+end
+
 Quando('adicionar um produto ao carrinho') do 
     @product_page.btn_add_cart_pdp.click
 end

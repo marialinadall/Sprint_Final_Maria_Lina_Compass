@@ -19,6 +19,11 @@ Para ficar satisfeita com o produto a ser comprado
     Cenário: Alterar cor do produto
         Quando trocar a cor do produto na PDP
         Então a imagem do produto deverá ser alterada 
+    
+    @change_size
+    Cenário: Alterar o tamanho do produto
+        Quando trocar o tamanho do produto na PDP
+        Então o tamanho do produto deverá ser alterado 
 
     @add_to_cart
     Esquema do Cenário: Adicionar ao carrinho através da PDP
