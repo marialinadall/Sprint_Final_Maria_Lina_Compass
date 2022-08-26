@@ -10,7 +10,7 @@ Quando('excluir um produto do carrinho') do
 end
   
 Então('o produto deverá desaparecer da página do carrinho') do
-    @product_page.wait_until_emptycart_msg_visible(wait: 5)
+    @product_page.wait_until_emptycart_msg_visible(wait: 15)
 end
 
 
